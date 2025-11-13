@@ -2,6 +2,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Faker\Factory;
 
 class CreatePelangganDummy extends Seeder
 {
@@ -10,7 +12,7 @@ class CreatePelangganDummy extends Seeder
      */
     public function run()
     {
-        $faker = \Faker\Factory::create();
+        $faker = Factory::create();
 
         foreach (range(1, 100) as $index) {
             DB::table('pelanggan')->insert([
